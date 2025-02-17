@@ -6,11 +6,81 @@
 <!-- Устанавливает метатег viewport для управления макетом страницы на
 мобильных устройствах -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- Подключаем стили -->
-<link rel="stylesheet" href="../css/style.css">
 <!-- Заголовок страницы, отображаемый на вкладке браузера -->
 <title>User Management</title>
 </head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+form{  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 2%;
+}
+
+input{
+    width: 220px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #757575;
+    padding: 0 10px;
+}
+
+.btn-custom{
+    color: #ffe9f4;
+    padding: 10px;
+    border-radius: 5px;
+    border:none;
+    background-color: palevioletred;
+}
+
+.btn-custom:hover{
+    background-color: rgb(246, 74, 103);
+    color: #000;
+}
+
+.btn-custom:active{
+    background-color: #ffbdde;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+h2{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.card{
+    background-color: #ffbdde;
+    border: 1px solid #ff5cae;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+img{
+    width: 200px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 50px;
+}
+</style>
 <body>
     <!-- Main heading of the page -->
     <h1>User Management</h1>
@@ -24,14 +94,14 @@
             <ul id="user-list"></ul>
         </div>
         <div>
-            <img src="../img/users.png" alt="">
+            <img src="img/users.png" alt="">
         </div>
     </div>
 
     <!-- Section to create a new user -->
     <div class="card">
         <div>
-            <img src="../img/create.png" alt="">
+            <img src="img/create.png" alt="">
         </div>
         <div>
             <!-- Heading for the user creation form -->
@@ -108,14 +178,14 @@
             <p id="status"></p>
         </div>
         <div>
-            <img src="../img/login.png" alt="">
+            <img src="img/login.png" alt="">
         </div>
     </div>
 
     <!-- Section to get user info -->
     <div class="card">
         <div>
-            <img src="../img/info.png" alt="">
+            <img src="img/info.png" alt="">
         </div>
         <div>
             <h2>Get User Info</h2>

@@ -18,10 +18,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import HTMLResponse
 
-
-
-
-
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 # Создание объекта FastAPI
@@ -167,7 +163,6 @@ async def get_client():
         return file.read()
 
 # Маршрут для удаления пользователя по ID
-# Маршрут для удаления пользователя по ID
 @app.delete("/users/{user_id}", response_model=UserResponse)
 async def delete_user(user_id: int, current_user: Annotated[User, Depends(get_current_active_user)], db: Session = Depends(get_db)):
     if current_user.id != user_id:
@@ -250,11 +245,6 @@ def register_user(user: UserCreate, db: Session = Depends(get_db)):
     except IntegrityError:
         db.rollback()
         raise HTTPException(status_code=400, detail="Username or Email already registered")
-
-
-
-
-
 
 origins = [
 "http://localhost.tiangolo.com",
